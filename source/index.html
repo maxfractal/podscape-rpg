@@ -5,24 +5,37 @@
     </head>
     <body>
         <canvas class="canvas" width="600" height="600"></canvas>
+        <div style="display:none">
+            <img src="assets/images/cat-sm.png"
+                id="#cat" 
+                alt="Cat"
+                width="300"
+                height="202">
+        </div>
         <script>
             console.log("hello");
             //console.log(banner);
 
             let canvas = document.querySelector('canvas');
             let context = canvas.getContext('2d');
+            const image = document.getElementById("#cat");
+
+              
 
             //context.fillStyle = 'blue';
             //context.fillRect(100, 100, 400, 400);
 
             context.beginPath();
-            context.rect(100,100,400,400);
+            context.rect(100,100,300,400);
+            
             context.stroke();
 
             context.beginPath();
             context.arc(300,300,100,0,Math.PI*2);
             context.stroke();
-
+            image.addEventListener('load', e => {
+                context.drawImage(image, 0, 0, 300, 202,  100, 100, 300, 202);
+            }); 
         </script>
 
         <script type="text/javascript" src="assets/scripts/p4-rpg.js"></script>
