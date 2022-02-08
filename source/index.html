@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <canvas class="canvas" width="600" height="600"></canvas>
+        <script>
+            console.log("hello");
+            //console.log(banner);
+
+            let canvas = document.querySelector('canvas');
+            let context = canvas.getContext('2d');
+
+            //context.fillStyle = 'blue';
+            //context.fillRect(100, 100, 400, 400);
+
+            context.beginPath();
+            context.rect(100,100,400,400);
+            context.stroke();
+
+            context.beginPath();
+            context.arc(300,300,100,0,Math.PI*2);
+            context.stroke();
+
+        </script>
+
+        <script type="text/javascript" src="assets/scripts/p4-rpg.js"></script>
+    </body>
+</html>
